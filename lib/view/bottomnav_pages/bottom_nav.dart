@@ -17,25 +17,45 @@ class BottomNav extends StatelessWidget {
             ),
             bottomNavigationBar: BottomNavigationBar(
               type: BottomNavigationBarType.values.first,
-              items: const [
+              items: [
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.home),
+                  icon: Image.asset(
+                    'assets/home.png',
+                    height: 24,
+                    width: 24,
+                  ),
                   label: 'Home',
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.money),
+                  icon: Image.asset(
+                    'assets/doller.png',
+                    height: 24,
+                    width: 24,
+                  ),
                   label: 'Loans',
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.text_snippet),
+                  icon: Image.asset(
+                    'assets/file.png',
+                    height: 24,
+                    width: 24,
+                  ),
                   label: 'Contracts',
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.groups),
+                  icon: Image.asset(
+                    'assets/users.png',
+                    height: 24,
+                    width: 24,
+                  ),
                   label: 'Teams',
                 ),
                 BottomNavigationBarItem(
-                  icon: Icon(Icons.chat),
+                  icon: Image.asset(
+                    'assets/chat.png',
+                    height: 24,
+                    width: 24,
+                  ),
                   label: 'Chat',
                 ),
               ],

@@ -10,6 +10,7 @@ class TransactionPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenheight = MediaQuery.of(context).size.height;
     return Scaffold(
       body: SafeArea(
           child: Padding(
@@ -72,8 +73,8 @@ class TransactionPage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(10),
                     color: const Color(0xFFE9EEF0),
                   ),
-                  height: 50,
-                  width: 50,
+                  height: screenheight * 0.053,
+                  width: screenheight * 0.053,
                   child: IconButton(
                       onPressed: () {
                         FilterPage(context).showModalSheet();

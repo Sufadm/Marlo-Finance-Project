@@ -14,6 +14,7 @@ class TransactionWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenheight = MediaQuery.of(context).size.height;
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
@@ -44,8 +45,8 @@ class TransactionWidget extends StatelessWidget {
               borderRadius: BorderRadius.circular(8),
               color: const Color(0xFF00455B),
             ),
-            height: 40,
-            width: 40,
+            height: screenheight * 0.043,
+            width: screenheight * 0.043,
             child: Icon(
               Icons.arrow_back,
               color: iconColor,

@@ -18,6 +18,7 @@ class TransactionPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             kHeight10,
+            //? Back button & Downloads-----------------------
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -36,6 +37,7 @@ class TransactionPage extends StatelessWidget {
               ],
             ),
             kHeight10,
+            //? transaction text widget------------
             Container(
               margin: const EdgeInsets.only(left: 6),
               child: Text(
@@ -45,6 +47,7 @@ class TransactionPage extends StatelessWidget {
               ),
             ),
             kHeight10,
+            //? Search List & Filter-----
             Row(
               children: [
                 Expanded(
@@ -73,16 +76,14 @@ class TransactionPage extends StatelessWidget {
                   width: 50,
                   child: IconButton(
                       onPressed: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) {
-                          return const FilterPage();
-                        }));
+                        FilterPage(context).showModalSheet();
                       },
                       icon: const Icon(Icons.filter_alt)),
                 ),
               ],
             ),
             kHeight15,
+            //? All transaction List--------------------------------------------
             Expanded(
               child: ListView.separated(
                 itemCount: 9,

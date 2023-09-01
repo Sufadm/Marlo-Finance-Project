@@ -22,6 +22,7 @@ class HomePage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            //? profile & notification widget------------------
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -49,6 +50,8 @@ class HomePage extends StatelessWidget {
               ],
             ),
             kHeight20,
+
+            //? Currency List----------------
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
@@ -78,6 +81,7 @@ class HomePage extends StatelessWidget {
               ),
             ),
             kHeight35,
+            //?   To-do List-------------
             Text('To do . 4',
                 style: GoogleFonts.notoSans(
                     fontSize: 16,
@@ -116,6 +120,7 @@ class HomePage extends StatelessWidget {
               ),
             ),
             kHeight20,
+            //? All transaction List--------------------------
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -159,6 +164,7 @@ class HomePage extends StatelessWidget {
                 },
               ),
             ),
+            //?All transaction List end=========================================
           ],
         ),
       )),

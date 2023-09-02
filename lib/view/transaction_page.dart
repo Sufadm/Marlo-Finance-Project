@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:marlo_project/utils/colors.dart';
 import 'package:marlo_project/utils/sizedbox.dart';
 import 'package:marlo_project/view/filter_page.dart';
-import 'package:marlo_project/widgets/transaction_widget.dart';
+import 'package:marlo_project/widgets/transaction_widget/transaction_widget.dart';
 
 class TransactionPage extends StatelessWidget {
   const TransactionPage({super.key});

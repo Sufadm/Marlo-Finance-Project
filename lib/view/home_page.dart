@@ -3,9 +3,9 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:marlo_project/utils/colors.dart';
 import 'package:marlo_project/utils/sizedbox.dart';
 import 'package:marlo_project/view/transaction_page.dart';
-import 'package:marlo_project/widgets/currency_widget.dart';
-import 'package:marlo_project/widgets/todo_widget.dart';
-import 'package:marlo_project/widgets/transaction_widget.dart';
+import 'package:marlo_project/widgets/currency_widget/currency_widget.dart';
+import 'package:marlo_project/widgets/todo_widget/todo_widget.dart';
+import 'package:marlo_project/widgets/transaction_widget/transaction_widget.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});

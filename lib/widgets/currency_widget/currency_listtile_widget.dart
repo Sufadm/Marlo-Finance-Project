@@ -9,19 +9,20 @@ class FilterCurrencyListTileWidget extends StatelessWidget {
     required this.networkImage,
     required this.currencyNameshort,
     required this.currencyname,
+    required this.onChanged,
   });
 
   final bool valuesecond;
-
   final String networkImage;
   final String currencyNameshort;
   final String currencyname;
+  final ValueChanged<bool?>? onChanged;
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         Checkbox(
-          onChanged: (value) {},
+          onChanged: onChanged,
           value: valuesecond,
         ),
         Expanded(
@@ -31,7 +32,9 @@ class FilterCurrencyListTileWidget extends StatelessWidget {
             ),
             title: Text(
               currencyNameshort,
-              style: GoogleFonts.notoSans(fontWeight: FontWeight.bold),
+              style: GoogleFonts.notoSans(
+                fontWeight: FontWeight.bold,
+              ),
             ),
             subtitle: Text(
               currencyname,

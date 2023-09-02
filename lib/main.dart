@@ -1,8 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:marlo_project/controller/checkbox_select.dart';
 import 'package:marlo_project/view/bottomnav_pages/bottom_nav.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (context) => CheckBoxProvider()),
+        // Add additional ChangeNotifierProviders for other classes
+      ],
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {

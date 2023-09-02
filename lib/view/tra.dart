@@ -1,3 +1,49 @@
+// Row(
+//           children: [
+//             Container(
+//               decoration: BoxDecoration(
+//                 borderRadius: BorderRadius.circular(20),
+//                 color: const Color.fromARGB(255, 188, 218, 242),
+//               ),
+//               height: 30,
+//               width: 120,
+//               child: Center(
+//                   child: Text(
+//                 'Account . 2    x',
+//                 style: GoogleFonts.notoSans(fontSize: 14),
+//               )),
+//             ),
+//             kWidth10,
+//             Container(
+//               decoration: BoxDecoration(
+//                 borderRadius: BorderRadius.circular(20),
+//                 color: const Color.fromARGB(255, 188, 218, 242),
+//               ),
+//               height: 30,
+//               width: 120,
+//               child: Center(
+//                   child: Text(
+//                 'Account . 2    x',
+//                 style: GoogleFonts.notoSans(fontSize: 14),
+//               )),
+//             ),
+//             kWidth10,
+//             Container(
+//               decoration: BoxDecoration(
+//                 borderRadius: BorderRadius.circular(20),
+//                 color: const Color.fromARGB(255, 188, 218, 242),
+//               ),
+//               height: 30,
+//               width: 120,
+//               child: Center(
+//                   child: Text(
+//                 'Account . 2    x',
+//                 style: GoogleFonts.notoSans(fontSize: 14),
+//               )),
+//             ),
+//           ],
+//         ),class TransactionPage extends StatelessWidget {
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
@@ -9,11 +55,7 @@ import 'package:marlo_project/utils/sizedbox.dart';
 import 'package:marlo_project/view/filter_page.dart';
 import 'package:provider/provider.dart';
 
-class TransactionPage extends StatelessWidget {
-  const TransactionPage({
-    super.key,
-  });
-
+class Ssdc {
   @override
   Widget build(BuildContext context) {
     final searchProvider = Provider.of<SearchProvider>(context);

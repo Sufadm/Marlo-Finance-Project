@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:marlo_project/controller/checkbox_select.dart';
+import 'package:marlo_project/controller/search.dart';
 import 'package:marlo_project/view/bottomnav_pages/bottom_nav.dart';
 import 'package:provider/provider.dart';
 
@@ -8,6 +9,9 @@ void main() {
     MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => CheckBoxProvider()),
+        ChangeNotifierProvider(
+          create: (context) => SearchProvider(),
+        )
       ],
       child: const MyApp(),
     ),

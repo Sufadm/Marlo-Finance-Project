@@ -46,19 +46,21 @@ class CustomTimeRange {
                   selectionMode: DateRangePickerSelectionMode.range,
                 ),
                 const Expanded(child: SizedBox()),
-                //?Cancel button
+                //Cancel button
                 ButtonWidget(
-                    ontap: () {},
+                    ontap: () {
+                      Navigator.pop(context);
+                    },
                     textcolor: kBlue,
                     context: context,
                     color: const Color(0xFFC6EBF6),
                     buttonname: 'Cancel'),
                 kHeight10,
-                //?Apply Button
+                //Apply Button
                 ButtonWidget(
                   ontap: () => Navigator.pushReplacement(context,
                       MaterialPageRoute(builder: (context) {
-                    return TransactionPage();
+                    return const TransactionPage();
                   })),
                   textcolor: kWhite,
                   context: context,

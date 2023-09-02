@@ -6,7 +6,9 @@ import 'package:marlo_project/utils/sizedbox.dart';
 import 'package:marlo_project/view/custom_time_range_page.dart';
 import 'package:marlo_project/widgets/currency_widget/button_widget.dart';
 import 'package:marlo_project/widgets/currency_widget/currency_listtile_widget.dart';
-import 'package:marlo_project/widgets/filter_page_widget/moneyin_and_out_button.dart';
+import 'package:marlo_project/widgets/filter_page_widget/filter_box_container.dart';
+import 'package:marlo_project/widgets/filter_page_widget/filter_box_container_status.dart';
+import 'package:marlo_project/widgets/filter_page_widget/timerange_container.dart';
 import 'package:provider/provider.dart';
 
 class FilterPage {

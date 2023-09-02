@@ -6,7 +6,13 @@ import 'package:marlo_project/view/filter_page.dart';
 import 'package:marlo_project/widgets/transaction_widget/transaction_widget.dart';
 
 class TransactionPage extends StatelessWidget {
-  const TransactionPage({super.key});
+  final List<IconData> transactionIcons = [
+    Icons.arrow_back,
+    Icons.shopping_cart,
+    Icons.restaurant,
+    // Add more icons as needed
+  ];
+  TransactionPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -87,7 +93,7 @@ class TransactionPage extends StatelessWidget {
             //? All transaction List--------------------------------------------
             Expanded(
               child: ListView.separated(
-                itemCount: 9,
+                itemCount: 20,
                 separatorBuilder: (BuildContext context, int index) {
                   return const SizedBox(
                     height: 5,

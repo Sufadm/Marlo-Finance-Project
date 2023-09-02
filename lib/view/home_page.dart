@@ -31,8 +31,8 @@ class HomePage extends StatelessWidget {
                       border: Border.all(color: const Color(0xffdb8500)),
                       borderRadius: BorderRadius.circular(10),
                       color: kOrangeAccent),
-                  height: screenheight * 0.048,
-                  width: screenWidth * 0.11,
+                  height: screenheight * 0.042,
+                  width: screenWidth * 0.10,
                   child: const Center(
                       child: Text(
                     'JB',
@@ -44,7 +44,7 @@ class HomePage extends StatelessWidget {
                 ),
                 const Icon(
                   Icons.notifications,
-                  size: 32,
+                  size: 30,
                   color: kBlue,
                 ),
               ],
@@ -142,7 +142,7 @@ class HomePage extends StatelessWidget {
                   onPressed: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) {
-                      return const TransactionPage();
+                      return TransactionPage();
                     }));
                   },
                 ),

@@ -58,7 +58,7 @@ class CustomTimeRange {
                 ButtonWidget(
                   ontap: () => Navigator.pushReplacement(context,
                       MaterialPageRoute(builder: (context) {
-                    return const TransactionPage();
+                    return TransactionPage();
                   })),
                   textcolor: kWhite,
                   context: context,

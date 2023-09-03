@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
-import 'package:lottie/lottie.dart';
+import 'package:marlo_project/controller/filter_values.dart';
 import 'package:marlo_project/controller/search.dart';
 import 'package:marlo_project/model/transaction_model.dart';
 import 'package:marlo_project/utils/colors.dart';
 import 'package:marlo_project/utils/sizedbox.dart';
 import 'package:marlo_project/view/filter_page.dart';
+import 'package:marlo_project/widgets/transaction_widget/transaction_filter_options.dart';
 import 'package:provider/provider.dart';
 
 class TransactionPage extends StatelessWidget {
@@ -45,7 +46,7 @@ class TransactionPage extends StatelessWidget {
               ],
             ),
             kHeight10,
-            //? transaction text widget-------------
+            // transaction text widget--------------
             Container(
               margin: const EdgeInsets.only(left: 6),
               child: Text(
@@ -55,7 +56,7 @@ class TransactionPage extends StatelessWidget {
               ),
             ),
             kHeight10,
-            //? Search List & Filter-----
+            // Search List & Filter-----
             Row(
               children: [
                 Expanded(
@@ -63,7 +64,6 @@ class TransactionPage extends StatelessWidget {
                     onChanged: (value) {
                       value = value.toLowerCase();
                       searchProvider.updateSearchText(value);
-                      print("Search Text: ${searchProvider.searchText}");
                     },
                     decoration: InputDecoration(
                       hintText: 'Search vessel',
@@ -98,7 +98,40 @@ class TransactionPage extends StatelessWidget {
             ),
             kHeight15,
 
-            //? All transaction List----------------------------
+            // filter options----------------------
+            Consumer<FilterValuesProvider>(
+              builder: (context, filterOptions, _) {
+                return Row(
+                  children: [
+                    if (filterOptions.showAccountContainer)
+                      TransactionFilterOptions(
+                        ontap: () {
+                          filterOptions.showAccountContainer = false;
+                        },
+                        accountName: 'Account . 2    x',
+                      ),
+                    kWidth10,
+                    if (filterOptions.showMoneyInContainer)
+                      TransactionFilterOptions(
+                        ontap: () {
+                          filterOptions.showMoneyInContainer = false;
+                        },
+                        accountName: 'Money in   x',
+                      ),
+                    kWidth10,
+                    if (filterOptions.showCompletedContainer)
+                      TransactionFilterOptions(
+                        ontap: () {
+                          filterOptions.showCompletedContainer = false;
+                        },
+                        accountName: 'Completed   x',
+                      ),
+                  ],
+                );
+              },
+            ),
+            kHeight10,
+            // All transaction List----------------------------
             Consumer<SearchProvider>(
               builder: (context, value, _) {
                 List<Data> data = SearchProvider.allTransaction;
@@ -108,25 +141,26 @@ class TransactionPage extends StatelessWidget {
                       .toLowerCase()
                       .contains(value.searchText)) {
                     temp.add(element);
-                  } else {
-                    return Column(
-                      children: [
-                        Lottie.network(
-                          'https://lottie.host/dc6da250-4b70-4eae-ac06-9a639212ab17/gwDgbycfXt.json',
-                          height: 300,
-                          fit: BoxFit.cover,
-                        ),
-                        const Center(
-                            child: Text(
-                          'No result Found',
-                          style: TextStyle(
-                              color: Color(0xFF75808A),
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold),
-                        ))
-                      ],
-                    );
                   }
+                  // else {
+                  //   return Column(
+                  //     children: [
+                  //       Lottie.network(
+                  //         'https://lottie.host/dc6da250-4b70-4eae-ac06-9a639212ab17/gwDgbycfXt.json',
+                  //         height: 300,
+                  //         fit: BoxFit.cover,
+                  //       ),
+                  //       const Center(
+                  //           child: Text(
+                  //         'No result Found',
+                  //         style: TextStyle(
+                  //             color: Color(0xFF75808A),
+                  //             fontSize: 16,
+                  //             fontWeight: FontWeight.bold),
+                  //       ))
+                  //     ],
+                  //   );
+                  // }
                 }
                 data = temp;
                 return Expanded(

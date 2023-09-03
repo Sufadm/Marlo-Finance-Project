@@ -14,7 +14,6 @@ import 'package:provider/provider.dart';
 class FilterPage {
   final BuildContext context;
   bool valuefirst = false;
-  bool valuesecond = false;
   bool selected = false;
 
   FilterPage(this.context);
@@ -35,7 +34,6 @@ class FilterPage {
           return SizedBox(
             width: double.infinity,
             height: screenheight / 1.10,
-            // color: Colors.green,
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: SingleChildScrollView(
@@ -278,8 +276,12 @@ class FilterPage {
                           //?Apply Button
                           ButtonWidget(
                             ontap: () {
-                              CustomTimeRange(context: context)
-                                  .bottomsheetTime();
+                              CustomTimeRange(
+                                context: context,
+                                currencies: selectvalue.value.toString(),
+                                minimumamount: minimumController.text,
+                                maximumamount: maximumController.text,
+                              ).bottomsheetTime();
                             },
                             textcolor: kWhite,
                             context: context,

@@ -1,15 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:marlo_project/controller/filter_values.dart';
 import 'package:marlo_project/utils/colors.dart';
 import 'package:marlo_project/utils/sizedbox.dart';
 import 'package:marlo_project/view/transaction_page.dart';
 import 'package:marlo_project/widgets/currency_widget/button_widget.dart';
+import 'package:provider/provider.dart';
 import 'package:syncfusion_flutter_datepicker/datepicker.dart';
 
 class CustomTimeRange {
   final BuildContext context;
+  final String minimumamount;
+  final String maximumamount;
 
-  CustomTimeRange({required this.context});
+  final String currencies;
+  CustomTimeRange(
+      {required this.minimumamount,
+      required this.currencies,
+      required this.context,
+      required this.maximumamount});
   void bottomsheetTime() {
     final screenheight = MediaQuery.of(context).size.height;
     showModalBottomSheet<dynamic>(
@@ -42,8 +51,16 @@ class CustomTimeRange {
                       color: const Color(0xFF75808A), fontSize: 14),
                 ),
                 kHeight20,
+                // date range picker-------------------------------
                 SfDateRangePicker(
                   selectionMode: DateRangePickerSelectionMode.range,
+                  onSelectionChanged:
+                      (DateRangePickerSelectionChangedArgs args) {
+                    if (args.value is PickerDateRange) {
+                      DateTime startDate = args.value.startDate!;
+                      DateTime endDate = args.value.endDate!;
+                    }
+                  },
                 ),
                 const Expanded(child: SizedBox()),
                 //Cancel button
@@ -58,10 +75,20 @@ class CustomTimeRange {
                 kHeight10,
                 //Apply Button
                 ButtonWidget(
-                  ontap: () => Navigator.pushReplacement(context,
+                  ontap: () {
+                    Provider.of<FilterValuesProvider>(context, listen: false)
+                        .updateData(
+                      currencies,
+                      minimumamount,
+                      maximumamount,
+                    );
+                    Navigator.pushReplacement(
+                      context,
                       MaterialPageRoute(builder: (context) {
-                    return const TransactionPage();
-                  })),
+                        return const TransactionPage();
+                      }),
+                    );
+                  },
                   textcolor: kWhite,
                   context: context,
                   color: const Color(0xFF0CABDF),

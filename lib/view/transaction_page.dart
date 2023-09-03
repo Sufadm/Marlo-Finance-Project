@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
+import 'package:lottie/lottie.dart';
 import 'package:marlo_project/controller/filter_values.dart';
 import 'package:marlo_project/controller/search.dart';
 import 'package:marlo_project/model/transaction_model.dart';
@@ -14,12 +15,12 @@ class TransactionPage extends StatelessWidget {
   const TransactionPage({
     super.key,
   });
-
   @override
   Widget build(BuildContext context) {
     final searchProvider = Provider.of<SearchProvider>(context);
     final screenheight = MediaQuery.of(context).size.height;
     return Scaffold(
+      backgroundColor: const Color(0xFFF7F7F7),
       body: SafeArea(
           child: Padding(
         padding: const EdgeInsets.all(10.0),
@@ -97,7 +98,6 @@ class TransactionPage extends StatelessWidget {
               ],
             ),
             kHeight15,
-
             // filter options----------------------
             Consumer<FilterValuesProvider>(
               builder: (context, filterOptions, _) {
@@ -142,24 +142,25 @@ class TransactionPage extends StatelessWidget {
                       .contains(value.searchText)) {
                     temp.add(element);
                   }
-                  // else {
-                  //   return Column(
-                  //     children: [
-                  //       Lottie.network(
-                  //         'https://lottie.host/dc6da250-4b70-4eae-ac06-9a639212ab17/gwDgbycfXt.json',
-                  //         height: 300,
-                  //         fit: BoxFit.cover,
-                  //       ),
-                  //       const Center(
-                  //           child: Text(
-                  //         'No result Found',
-                  //         style: TextStyle(
-                  //             color: Color(0xFF75808A),
-                  //             fontSize: 16,
-                  //             fontWeight: FontWeight.bold),
-                  //       ))
-                  //     ],
-                  //   );
+                }
+                if (temp.isEmpty) {
+                  return Column(
+                    children: [
+                      Lottie.network(
+                        'https://lottie.host/dc6da250-4b70-4eae-ac06-9a639212ab17/gwDgbycfXt.json',
+                        height: 300,
+                        fit: BoxFit.cover,
+                      ),
+                      const Center(
+                          child: Text(
+                        'No result Found',
+                        style: TextStyle(
+                            color: Color(0xFF75808A),
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold),
+                      ))
+                    ],
+                  );
                   // }
                 }
                 data = temp;
@@ -168,7 +169,7 @@ class TransactionPage extends StatelessWidget {
                     itemCount: data.length,
                     separatorBuilder: (BuildContext context, int index) {
                       return const SizedBox(
-                        height: 5,
+                        height: 7,
                       );
                     },
                     itemBuilder: (context, index) {

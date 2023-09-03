@@ -12,10 +12,11 @@ class CustomTimeRange {
   final BuildContext context;
   final String minimumamount;
   final String maximumamount;
-
+  final Icon icon;
   final String currencies;
   CustomTimeRange(
       {required this.minimumamount,
+      required this.icon,
       required this.currencies,
       required this.context,
       required this.maximumamount});
@@ -37,6 +38,18 @@ class CustomTimeRange {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                kHeight10,
+                Center(
+                  child: Container(
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(50),
+                      color: const Color(0xFFC6EBF6),
+                    ),
+                    width: 50,
+                    height: 7,
+                  ),
+                ),
+                kHeight30,
                 Text(
                   'Custom time range',
                   style: GoogleFonts.notoSans(
@@ -78,10 +91,7 @@ class CustomTimeRange {
                   ontap: () {
                     Provider.of<FilterValuesProvider>(context, listen: false)
                         .updateData(
-                      currencies,
-                      minimumamount,
-                      maximumamount,
-                    );
+                            currencies, minimumamount, maximumamount, icon);
                     Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(builder: (context) {

@@ -16,6 +16,7 @@ class HomePage extends StatelessWidget {
     final screenheight = MediaQuery.of(context).size.height;
 
     return Scaffold(
+      backgroundColor: const Color(0xFFF7F7F7),
       body: SafeArea(
           child: Padding(
         padding: const EdgeInsets.all(12.0),
@@ -153,7 +154,7 @@ class HomePage extends StatelessWidget {
                 itemCount: 4,
                 separatorBuilder: (BuildContext context, int index) {
                   return const SizedBox(
-                    height: 5,
+                    height: 7,
                   );
                 },
                 itemBuilder: (context, index) {

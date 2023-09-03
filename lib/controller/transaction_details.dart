@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:marlo_project/model/transaction_model.dart';
-import 'package:marlo_project/controller/login_service.dart.dart';
+import 'package:marlo_project/services/login_service.dart.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 Future<List<Data>> fetchData() async {

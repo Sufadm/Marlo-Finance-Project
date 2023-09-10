@@ -4,7 +4,7 @@ import 'package:intl/intl.dart';
 import 'package:marlo_project/controller/search.dart';
 import 'package:marlo_project/controller/transaction_details.dart';
 import 'package:marlo_project/model/transaction_model.dart';
-import 'package:marlo_project/utils/colors.dart';
+import 'package:marlo_project/view/utils/colors.dart';
 
 class TransactionWidget extends StatelessWidget {
   final int index;

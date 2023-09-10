@@ -3,7 +3,7 @@ import 'package:marlo_project/controller/checkbox_select.dart';
 import 'package:marlo_project/controller/filter_values.dart';
 import 'package:marlo_project/controller/search.dart';
 import 'package:marlo_project/view/bottomnav_pages/bottom_nav.dart';
-import 'package:marlo_project/view/transaction_page.dart';
+import 'package:marlo_project/view/screens/transaction_page.dart';
 import 'package:provider/provider.dart';
 
 void main() {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:marlo_project/utils/fontstyle.dart';
+import 'package:marlo_project/view/utils/fontstyle.dart';
 
 class FilterCurrencyListTileWidget extends StatelessWidget {
   const FilterCurrencyListTileWidget({

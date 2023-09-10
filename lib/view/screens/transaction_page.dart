@@ -5,10 +5,10 @@ import 'package:lottie/lottie.dart';
 import 'package:marlo_project/controller/filter_values.dart';
 import 'package:marlo_project/controller/search.dart';
 import 'package:marlo_project/model/transaction_model.dart';
-import 'package:marlo_project/utils/colors.dart';
-import 'package:marlo_project/utils/sizedbox.dart';
-import 'package:marlo_project/view/filter_page.dart';
-import 'package:marlo_project/widgets/transaction_widget/transaction_filter_options.dart';
+import 'package:marlo_project/view/screens/widgets/transaction_widget/transaction_filter_options.dart';
+import 'package:marlo_project/view/utils/colors.dart';
+import 'package:marlo_project/view/utils/sizedbox.dart';
+import 'package:marlo_project/view/screens/filter_page.dart';
 import 'package:provider/provider.dart';
 
 class TransactionPage extends StatelessWidget {

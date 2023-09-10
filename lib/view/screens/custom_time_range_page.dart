@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:marlo_project/controller/filter_values.dart';
-import 'package:marlo_project/utils/colors.dart';
-import 'package:marlo_project/utils/sizedbox.dart';
-import 'package:marlo_project/view/transaction_page.dart';
-import 'package:marlo_project/widgets/currency_widget/button_widget.dart';
+import 'package:marlo_project/view/screens/transaction_page.dart';
+import 'package:marlo_project/view/screens/widgets/currency_widget/button_widget.dart';
+import 'package:marlo_project/view/utils/colors.dart';
+import 'package:marlo_project/view/utils/sizedbox.dart';
 import 'package:provider/provider.dart';
 import 'package:syncfusion_flutter_datepicker/datepicker.dart';
 

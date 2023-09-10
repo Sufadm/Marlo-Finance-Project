@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:marlo_project/utils/colors.dart';
-import 'package:marlo_project/utils/sizedbox.dart';
+import 'package:marlo_project/view/utils/colors.dart';
+import 'package:marlo_project/view/utils/sizedbox.dart';
 
 class CurrencyWidget extends StatelessWidget {
   const CurrencyWidget({

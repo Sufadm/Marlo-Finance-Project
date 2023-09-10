@@ -2,14 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:marlo_project/controller/checkbox_select.dart';
 import 'package:marlo_project/controller/filter_values.dart';
-import 'package:marlo_project/utils/colors.dart';
-import 'package:marlo_project/utils/sizedbox.dart';
-import 'package:marlo_project/view/custom_time_range_page.dart';
-import 'package:marlo_project/widgets/currency_widget/button_widget.dart';
-import 'package:marlo_project/widgets/currency_widget/currency_listtile_widget.dart';
-import 'package:marlo_project/widgets/filter_page_widget/filter_box_container.dart';
-import 'package:marlo_project/widgets/filter_page_widget/filter_box_container_status.dart';
-import 'package:marlo_project/widgets/filter_page_widget/timerange_container.dart';
+import 'package:marlo_project/view/screens/custom_time_range_page.dart';
+import 'package:marlo_project/view/screens/widgets/currency_widget/button_widget.dart';
+import 'package:marlo_project/view/screens/widgets/currency_widget/currency_listtile_widget.dart';
+import 'package:marlo_project/view/screens/widgets/filter_page_widget/filter_box_container.dart';
+import 'package:marlo_project/view/screens/widgets/filter_page_widget/filter_box_container_status.dart';
+import 'package:marlo_project/view/screens/widgets/filter_page_widget/timerange_container.dart';
+import 'package:marlo_project/view/utils/colors.dart';
+import 'package:marlo_project/view/utils/sizedbox.dart';
+
 import 'package:provider/provider.dart';
 
 class FilterPage {

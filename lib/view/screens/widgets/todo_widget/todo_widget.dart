@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:marlo_project/utils/colors.dart';
-import 'package:marlo_project/utils/fontstyle.dart';
+import 'package:marlo_project/view/utils/colors.dart';
+import 'package:marlo_project/view/utils/fontstyle.dart';
 
 class ToDoWidget extends StatelessWidget {
   const ToDoWidget({

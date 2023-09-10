@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:marlo_project/utils/colors.dart';
-import 'package:marlo_project/utils/sizedbox.dart';
-import 'package:marlo_project/widgets/filter_page_widget/moneyin_and_out_button.dart';
+import 'package:marlo_project/view/utils/colors.dart';
+import 'package:marlo_project/view/utils/sizedbox.dart';
+import 'package:marlo_project/view/screens/widgets/filter_page_widget/moneyin_and_out_button.dart';
 
-class TimeRangeContainer extends StatelessWidget {
-  const TimeRangeContainer({
+class FilterBoxContainerStatus extends StatelessWidget {
+  const FilterBoxContainerStatus({
     super.key,
     required this.screenheight,
   });
@@ -27,7 +27,7 @@ class TimeRangeContainer extends StatelessWidget {
           Container(
             margin: const EdgeInsets.only(left: 10, top: 10),
             child: Text(
-              'Time Range',
+              'Statuses .6',
               style: GoogleFonts.notoSans(
                   fontSize: 16, fontWeight: FontWeight.bold),
             ),
@@ -37,17 +37,17 @@ class TimeRangeContainer extends StatelessWidget {
             children: [
               MoneyInAndOutButton(
                 color: Color.fromARGB(255, 188, 218, 242),
-                text: '18 Jan - 2 Feb',
+                text: 'Completed',
                 textcolor: kBlue,
               ),
               MoneyInAndOutButton(
                 color: Colors.white,
-                text: 'Today',
+                text: 'Failed',
                 textcolor: Color(0xFF75808A),
               ),
               MoneyInAndOutButton(
                 color: Colors.white,
-                text: 'This week',
+                text: 'Declined',
                 textcolor: Color(0xFF75808A),
               ),
             ],
@@ -57,12 +57,17 @@ class TimeRangeContainer extends StatelessWidget {
             children: [
               MoneyInAndOutButton(
                 color: kWhite,
-                text: 'This month',
+                text: 'Pending',
                 textcolor: Color(0xFF75808A),
               ),
               MoneyInAndOutButton(
                 color: Colors.white,
-                text: 'This quarter',
+                text: 'Reverted',
+                textcolor: Color(0xFF75808A),
+              ),
+              MoneyInAndOutButton(
+                color: Colors.white,
+                text: 'Cancelled',
                 textcolor: Color(0xFF75808A),
               ),
             ],

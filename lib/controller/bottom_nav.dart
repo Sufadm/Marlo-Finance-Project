@@ -3,7 +3,7 @@ import 'package:marlo_project/view/bottomnav_pages/chat.dart';
 import 'package:marlo_project/view/bottomnav_pages/contracts.dart';
 import 'package:marlo_project/view/bottomnav_pages/loans.dart';
 import 'package:marlo_project/view/bottomnav_pages/teams.dart';
-import 'package:marlo_project/view/home_page.dart';
+import 'package:marlo_project/view/screens/home_page.dart';
 
 class BottomNavState extends ChangeNotifier {
   int _selectedIndex = 0;

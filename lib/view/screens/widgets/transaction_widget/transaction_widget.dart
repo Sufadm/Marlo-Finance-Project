@@ -53,6 +53,7 @@ class TransactionWidget extends StatelessWidget {
                   ),
                 ),
                 subtitle: Text(
+                  fdfdfd
                   formattedDate,
                   style: GoogleFonts.notoSans(
                       fontSize: 12, color: const Color(0xFF979797)),
